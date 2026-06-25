@@ -6,12 +6,14 @@ void printHp(const int* hp);
 bool isAlive(const int* hp);
 
 void takeDamage(int* hp, int damage) {
-    int res = *hp -= damage;
+    if (*hp > 0) {
+        int res = *hp -= damage;
+    }
 }
 void heal(int* hp, int amount) {
     if (*hp > 0 && *hp < 100) {
+        int res = *hp += amount;
     }
-    int res = *hp += amount;
 }
 void printHp(const int* hp) {
     std::cout << "HP posle = " << *hp << std::endl;
