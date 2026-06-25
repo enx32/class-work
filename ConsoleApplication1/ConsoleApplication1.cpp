@@ -11,7 +11,7 @@ void takeDamage(int* hp, int damage) {
     }
 }
 void heal(int* hp, int amount) {
-    if (*hp > 0 && *hp < 100) {
+    if (*hp+amount <= 100) {
         int res = *hp += amount;
     }
 }
