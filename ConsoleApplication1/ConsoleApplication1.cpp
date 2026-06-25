@@ -7,18 +7,11 @@ bool isAlive(const int* hp);
 
 void takeDamage(int* hp, int damage) {
     int res = *hp -= damage;
-    if (res > 0) {
-
-    }
-    else {
-        std::cout << "player died" << std::endl;
-    }
 }
 void heal(int* hp, int amount) {
-    int res = *hp += amount;
-    if (res > 0 && res < 100) {
-
+    if (*hp > 0 && *hp < 100) {
     }
+    int res = *hp += amount;
 }
 void printHp(const int* hp) {
     std::cout << "HP posle = " << *hp << std::endl;
