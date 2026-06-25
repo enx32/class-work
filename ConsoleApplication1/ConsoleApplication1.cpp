@@ -7,12 +7,12 @@ bool isAlive(const int* hp);
 
 void takeDamage(int* hp, int damage) {
     if (*hp > 0) {
-        int res = *hp -= damage;
+        *hp -= damage;
     }
 }
 void heal(int* hp, int amount) {
-    if (*hp+amount <= 100) {
-        int res = *hp += amount;
+    if (*hp + amount <= 100) {
+        *hp += amount;
     }
 }
 void printHp(const int* hp) {
